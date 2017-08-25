@@ -4,15 +4,15 @@ import (
   "github.com/hashicorp/consul/api"
 )
 
-type ChoreoAgent struct {
-  source *api.Agent
+type ChoreoDiscoAgent struct {
+  node *api.Agent
 }
 
-type ChoreoAgents struct {
-  agents []ChoreoAgent
+type ChoreoDiscoAgents struct {
+  agents []ChoreoDiscoAgent
 }
 
-func New(client *api.Client) ChoreoAgent {
-  a := ChoreoAgent{ source: client.Agent() }
+func New(client *api.Client) ChoreoDiscoAgent {
+  a := ChoreoDiscoAgent{ node: client.Agent() }
   return a
 }
