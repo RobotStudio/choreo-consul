@@ -1,4 +1,4 @@
-package client
+package choreoconsul
 
 import (
   "github.com/hashicorp/consul/api"
